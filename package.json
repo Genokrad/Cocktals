@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Genokrad.github.io/cocktails",
+  "homepage": "https://Genokrad.github.io/Cocktals",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /cocktails/"
+    "build": "parcel build src/*.html --public-url /Cocktals/"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "aos": "^2.3.4",
+    "modern-normalize": "^1.1.0",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
