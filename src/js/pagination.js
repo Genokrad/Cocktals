@@ -10,9 +10,7 @@ let cnt = 0;
 export let ArrFetch = [];
 export const paginator = document.querySelector('.paginator');
 export const paginatorBut = document.querySelector('.pagination-buttton');
-export const paginatorBut2 = document.querySelector(
-  '.second-vector'
-);
+export const paginatorBut2 = document.querySelector('.second-vector');
 const screenD = window.matchMedia('(min-width: 1280px)');
 const screenM = window.matchMedia('(max-width: 768px)');
 const screenT = window.matchMedia('(max-width: 1280px)');
@@ -22,10 +20,11 @@ export function takeArreyREsult(e) {
   if (e.target !== e.currentTarget) {
     return fetchApi(url_by_first_letter, target.textContent)
       .then(({ drinks }) => {
+        console.log('sdfsdfssfdsfdsfs ', drinks);
         ArrFetch.push(drinks);
         createMarkup(drinks);
         const listEl = document.querySelector('.product__list');
-        
+
         if (screenM.matches) {
           cnt = 3;
           count = drinks.length;
@@ -43,7 +42,7 @@ export function takeArreyREsult(e) {
               (i + 1) +
               '</button>';
           }
-          paginatorBut.style.display='block';
+          paginatorBut.style.display = 'block';
           paginatorBut2.style.display = 'block';
           paginator.innerHTML = page;
 
@@ -217,7 +216,7 @@ export function takeArreyREsult(e) {
             }
             for (let i = data_page; i < div_num.length; i++) {
               if (j >= cnt) break;
-               div_num[i].style.cssText = `
+              div_num[i].style.cssText = `
                  display:block;
                  margin-right: 10px;
                  margin-bottom: 20px;
